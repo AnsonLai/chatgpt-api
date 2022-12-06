@@ -33,7 +33,7 @@ def send_message(message):
 
 def get_last_message():
     """Get the latest message"""
-    page_elements = PAGE.query_selector_all("div[class*='ConversationItem__Message']")
+    page_elements = PAGE.query_selector_all("div.markdown.prose")
     last_element = page_elements[-1]
     return last_element.inner_text()
 
